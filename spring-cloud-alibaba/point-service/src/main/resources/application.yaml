@@ -1,5 +1,11 @@
+server:
+  port: 9081
+
 spring:
   application:
     name: point-service
-server:
-  port: 9081
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
