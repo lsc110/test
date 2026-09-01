@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: point-service
+server:
+  port: 9081
