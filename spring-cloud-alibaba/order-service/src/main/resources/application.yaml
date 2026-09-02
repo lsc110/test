@@ -1,11 +1,13 @@
-server:
-  port: 9080
-
 spring:
   application:
     name: order-service
+  config:
+    import: nacos:order-service-dev.yml
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
 
