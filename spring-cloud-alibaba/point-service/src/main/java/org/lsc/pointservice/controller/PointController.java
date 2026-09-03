@@ -12,14 +12,15 @@ public class PointController {
         return "hello world";
     }
 
-    @PostMapping(value = "/getOrderInfo")
-    public String getOrderInfo(@RequestBody Order order) {
+    @PostMapping(value = "/getOrderId")
+    public String getOrderId(@RequestBody Order order) {
         return order.getProductName();
     }
     @PostMapping(value = "/getOrderName")
-    public String getOrderName(@RequestParam String id) {
+    public String getOrderName(@RequestParam("productName") String productName) {
         Order order = new Order();
         order.setProductName("福建");
+        System.out.println("9081");
         return order.getProductName();
     }
 

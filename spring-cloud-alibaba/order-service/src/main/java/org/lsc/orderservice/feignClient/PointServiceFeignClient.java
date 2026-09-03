@@ -13,7 +13,7 @@ public interface PointServiceFeignClient {
     String getOrderId(@RequestBody Order order);
 
     @PostMapping(value = "/point/getOrderName")
-    String getOrderName(@RequestParam String orderName);
+    String getOrderName(@RequestParam("productName") String orderName);
 
 
 
